@@ -4,24 +4,18 @@
       <v-card id="no-br pb-2">
         <v-toolbar class="toolbar-blue" text dense dark>
           <v-card dark color="purple">
-            <v-toolbar-title text class="toolbar-blue no-br no-box-shadow">Register</v-toolbar-title>
+            <v-toolbar-title text class="toolbar-blue no-br no-box-shadow">Login</v-toolbar-title>
           </v-card>
         </v-toolbar>
         <div class="pl-4 pr-4 pt-2 pb-2">
           <!-- <input v-model="email" type="email" name="email" id="email" placeholder="email" /> -->
           <v-text-field v-model="email" label="Email" class="pl-2 pr-2" required></v-text-field>
           <br />
-          <v-text-field
-            v-model="password"
-            type="password"
-            label="Password"
-            class="pl-2 pr-2"
-            required
-          ></v-text-field>
+          <v-text-field v-model="password" type="password" label="Password" class="pl-2 pr-2" required></v-text-field>
           <br />
           <div class="error">{{ error }}</div>
           <br />
-          <v-btn class="margin-auto mb-2" @click="register">Register</v-btn>
+          <v-btn class="margin-auto mb-2" @click="login">Login</v-btn>
         </div>
       </v-card>
     </v-flex>
@@ -40,9 +34,9 @@ export default {
     };
   },
   methods: {
-    async register() {
+    async login() {
       try {
-        const response = await AuthenticationService.register({
+        const response = await AuthenticationService.login({
           email: this.email,
           password: this.password
         });

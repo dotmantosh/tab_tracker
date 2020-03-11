@@ -13,7 +13,8 @@
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
-    "vue-router": "^3.1.5"
+    "vue-router": "^3.1.5",
+    "vuetify": "^2.2.15"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.0",
@@ -26,9 +27,13 @@
     "babel-eslint": "^10.0.3",
     "chai": "^4.1.2",
     "chromedriver": "80",
+    "deepmerge": "^4.2.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
+    "fibers": "^4.0.2",
     "geckodriver": "^1.19.1",
+    "sass": "^1.26.2",
+    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   }
 }
