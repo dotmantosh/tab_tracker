@@ -11,7 +11,13 @@
           <!-- <input v-model="email" type="email" name="email" id="email" placeholder="email" /> -->
           <v-text-field v-model="email" label="Email" class="pl-2 pr-2" required></v-text-field>
           <br />
-          <v-text-field v-model="password" type="password" label="Password" class="pl-2 pr-2" required></v-text-field>
+          <v-text-field
+            v-model="password"
+            type="password"
+            label="Password"
+            class="pl-2 pr-2"
+            required
+          ></v-text-field>
           <br />
           <div class="error">{{ error }}</div>
           <br />
@@ -40,7 +46,8 @@ export default {
           email: this.email,
           password: this.password
         });
-        console.log(response);
+        this.$store.dispatch("setToken", response.data.token);
+        this.$store.dispatch("setUser", response.data.user);
       } catch (error) {
         this.error = error.response.data.error;
       }
